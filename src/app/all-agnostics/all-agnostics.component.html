@@ -1,0 +1,5 @@
+<h1> All our members! </h1>
+<div *ngFor="let member of members | async">
+  <h3>{{member.name}}</h3>
+  <h5>{{member.motto}}</h5>
+</div>
