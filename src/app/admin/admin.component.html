@@ -1,8 +1,16 @@
-<h2> Add new member</h2>
-<div class="col-lg-4">
-  <input class="form-control" #newName placeholder="Name First Last">
-  <input class="form-control" #newMotto placeholder="Motto">
-  <input class="form-control" #newRole placeholder="Role">
-  <input class="form-control" #newBirthday placeholder="Birthday MM/DD/YY">
-  <button (click)='submitForm(newName.value, newMotto.value, newRole.value, newBirthday.value)'>Add Member</button>
-</div>
+<div class="row">
+  <h2> Add new member</h2>
+  <div class="cheese">
+    <input class="form-control" #newName placeholder="Name First Last">
+    <input class="form-control" #newMotto placeholder="Motto">
+    <select class="form-control" #newRole>
+      <option>Cheiftain</option>
+      <option>Member</option>
+      <option>Prospect</option>
+    </select>
+    <input class="form-control" #newBirthday placeholder="Birthday MM/DD/YY">
+    <button (click)='submitForm(newName.value, newMotto.value, newRole.value, newBirthday.value)'>Add Member</button>
+  </div>
+<div>
+
+    <app-all-agnostics></app-all-agnostics>

@@ -11,6 +11,9 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
+import { EditMemberComponent } from './edit-member/edit-member.component';
+import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +27,10 @@ export const firebaseConfig = {
     AppComponent,
     AllAgnosticsComponent,
     AboutComponent,
-    AdminComponent
+    AdminComponent,
+    MemberDetailComponent,
+    EditMemberComponent,
+    RolePipe
   ],
   imports: [
     BrowserModule,

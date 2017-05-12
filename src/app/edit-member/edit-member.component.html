@@ -1,0 +1,21 @@
+
+<h4 id="namer">Edit {{selectedMember.name}}</h4>
+
+<button (click)="editButton=!editButton">Edit</button>
+<div *ngIf="editButton">
+  <input [(ngModel)]="selectedMember.name">
+  <br>
+  <input [(ngModel)]="selectedMember.motto">
+  <br>
+
+  <select id="whateves" class="form-control" [(ngModel)]="selectedMember.role">
+    <option>Cheiftain</option>
+    <option>Member</option>
+    <option>Prospect</option>
+  </select>
+  <br>
+  <input [(ngModel)]="selectedMember.birthday">
+  <button (click)="beginUpdatingMember(selectedMember)">Update</button>
+  <br>
+<button (click)="beginDeletingMember(selectedMember)">Delete</button>
+</div>

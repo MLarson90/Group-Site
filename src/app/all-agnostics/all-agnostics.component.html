@@ -1,5 +1,19 @@
-<h1> All our members! </h1>
-<div *ngFor="let member of members | async">
-  <h3>{{member.name}}</h3>
-  <h5>{{member.motto}}</h5>
+<div class="row">
+  <h1> All our members! </h1>
+  <select (change)="onChange($event.target.value)">
+  <option value="allMembers">All Members</option>
+  <option value="cheiftain">Cheiftains</option>
+  <option value="member">Members</option>
+  <option value="prospect">Prospects</option>
+</select>
+
+  <div *ngFor="let member of members | async | role:filterByRole">
+  <div class="col-lg-4">
+      <h3 (click)=goToDetailPage(member)>{{member.name}}</h3>
+      <h5>{{member.motto}}</h5>
+  </div>
+
+  <div *ngIf="currentRoute === '/admin'">
+     <app-edit-member [selectedMember]="member"></app-edit-member>
+  </div>
 </div>
