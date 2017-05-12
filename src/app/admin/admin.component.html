@@ -9,7 +9,7 @@
       <option>Prospect</option>
     </select>
     <input class="form-control" #newBirthday placeholder="Birthday MM/DD/YY">
-    <button (click)='submitForm(newName.value, newMotto.value, newRole.value, newBirthday.value)'>Add Member</button>
+    <button (click)="submitForm(newName.value, newMotto.value, newRole.value, newBirthday.value); newName.value=''; newMotto.value=''; newRole.value=''; newBirthday.value=''">Add Member</button>
   </div>
 <div>
 
